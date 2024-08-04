@@ -26,6 +26,7 @@ Before using the scripts in this repository, ensure you have the following:
 
 ## Available Scripts
 
+### EC2 
 ### toggle_ec2.sh
 
 This script allows you to list EC2 instances and toggle their state (start/stop) interactively. It fetches instances from a specified AWS profile and region.
