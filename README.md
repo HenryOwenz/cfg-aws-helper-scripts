@@ -7,7 +7,6 @@ Welcome to the `cfg-aws-helper-scripts` repository! This collection of scripts i
 - [Introduction](#introduction)
 - [Prerequisites](#prerequisites)
 - [Available Scripts](#available-scripts)
-## EC2 Management
   - [toggle_ec2.sh](#toggle_ec2sh)
 - [Usage](#usage)
 - [Contributing](#contributing)
