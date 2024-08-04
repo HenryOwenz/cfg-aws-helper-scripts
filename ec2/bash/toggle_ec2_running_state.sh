@@ -55,14 +55,23 @@ echo "---------------------------------------------------------------"
 IFS=$'\n' read -rd '' -a instance_array <<<"$instances"
 
 # Prompt user to select an instance by index
-echo -e "\nEnter the index number of the instance to toggle its state:"
-read index
+while true; do
+    echo -e "\nEnter the index number of the instance to toggle its state (or type 'q' to quit):"
+    read index
 
-# Validate the index input
-if ! [[ "$index" =~ ^[0-9]+$ ]] || [ "$index" -le 0 ] || [ "$index" -gt "${#instance_array[@]}" ]; then
-    echo "Error: Invalid index number."
-    exit 1
-fi
+    # Check if the user wants to quit
+    if [[ "$index" == "q" ]]; then
+        echo "Exiting script."
+        exit 0
+    fi
+
+    # Validate the index input
+    if [[ "$index" =~ ^[0-9]+$ ]] && [ "$index" -gt 0 ] && [ "$index" -le "${#instance_array[@]}" ]; then
+        break
+    else
+        echo "Error: Invalid input. Please enter a valid index number or 'q' to quit."
+    fi
+done
 
 # Get the instance ID, current state, and name from the selected index
 selected_instance=${instance_array[$((index-1))]}
