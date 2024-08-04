@@ -7,7 +7,7 @@ Welcome to the `cfg-aws-helper-scripts` repository! This collection of scripts i
 - [Introduction](#introduction)
 - [Prerequisites](#prerequisites)
 - [Available Scripts](#available-scripts)
-  - [toggle_ec2.sh](#toggle_ec2sh)
+  - [toggle_ec2_running_state.sh](#toggle_ec2sh)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -27,7 +27,7 @@ Before using the scripts in this repository, ensure you have the following:
 ## Available Scripts
 
 ### EC2 
-### toggle_ec2.sh
+### toggle_ec2_running_state.sh
 
 This script allows you to list EC2 instances and toggle their state (start/stop) interactively. It fetches instances from a specified AWS profile and region.
 
